@@ -20,8 +20,17 @@ namespace GCA3
 
         }
 
-        public override Draw()
+        public override void Draw(SpriteBatch spriteBatch)
         {
+            if (alive)
+            {
+                spriteBatch.Draw(image, position, null, Color.White, 0, Vector2.Zero, scale, SpriteEffects.None, 0);
+            }
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+
         }
     }
 }
